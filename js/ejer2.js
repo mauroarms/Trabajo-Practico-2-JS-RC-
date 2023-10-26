@@ -7,12 +7,31 @@
 7: Bien
 8-9: Notable
 10: Sobresaliente
+
+Si ingreso un número que no esté dentro del rango de 0 a 10 mostrar un mensaje de “número erróneo”. Si el número ingresado no es válido mostrar el mensaje “Introduce un número válido”.
+
+Ejemplo:
+
+
+
+Input: 5
+Input: 50
+Input: hola10
+Output: Suficiente
+Output: Número erróneo
+Output: Introduce un número válido
 */
 
 let nota = parseInt(prompt("Ingrese la nota (entre 0 y 10):"))
 
 while(nota<0 || nota>10 || isNaN(nota)){
-    nota = parseInt(prompt("INGRESE UN VALOR ENTRE 0 10:"))
+    if(isNaN(nota)){
+        alert("Introduce un número válido")
+        nota = parseInt(prompt("Ingrese la nota (entre 0 y 10):"))
+    }else{
+        alert("Número erróneo")
+        nota = parseInt(prompt("Ingrese la nota (entre 0 y 10):"))
+    }
 }
 
 if(nota<=2){
