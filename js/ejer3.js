@@ -10,13 +10,10 @@ let verificador = true
 
 while(verificador){
 
-    verificador = confirm("Presione:\n- 'Aceptar' si desea agregar una nueva frase\n- 'Cancelar' si desea finalizar el programa")
-    if(!verificador){
-        break
-    }
-
     frase = prompt("Ingrese la frase:")
     cadenas += (frase + " - ") 
+
+    verificador = confirm("Presione:\n- 'Aceptar' si desea agregar una nueva frase\n- 'Cancelar' si desea finalizar el programa")
 }
 
 cadenas = cadenas.substring(0,cadenas.length-3) //Sacar ultimo guión
