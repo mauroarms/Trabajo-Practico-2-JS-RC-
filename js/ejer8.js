@@ -9,3 +9,19 @@
 123456
 ……
 */
+
+let longPiramide = parseInt(prompt("Indique el valor (menor a 50):"))
+let puntero
+while(longPiramide>50){
+    longPiramide = parseInt(prompt("Indicar un valor MENOR a 50:"))
+}
+
+for(let i=1;i<=longPiramide;i++){
+    puntero = 1
+    document.write("<p>")
+    for(let j=1; j<=i; j++){
+        document.write(puntero)
+        puntero++
+    }
+    document.write("</p>")    
+}
